@@ -1,0 +1,31 @@
+{% extends "::base.html.twig" %}
+
+{%  block title 'Accueil' %}
+
+{%  block header  %}
+<h1>Les derniers tweets</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for  tweet in tweets %}
+        <li>  {{ tweet.message }}</li>
+
+
+
+    {% else %}
+    Aucun tweet
+    {% endfor %}
+
+</ul>
+{% endblock %}
+
+
+{%  block footer %}
+    {{ parent() }}
+
+    <a href="{{  path('app_twig_test') }}"> Lien vers la page twig test</a>
+    <br>
+    <a href="{{  path('app_tweet_list') }}"> Lien vers la page tweett</a>
+
+{% endblock %}
