@@ -7,17 +7,20 @@
 {% endblock %}
 
 {% block content %}
-<ul>
-    {% for  tweet in tweets %}
-        <li>  {{ tweet.message }}</li>
 
+
+    {% for  tweet in tweets %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+          {{ tweet.message }}
+        </div>
+    </div>
 
 
     {% else %}
     Aucun tweet
     {% endfor %}
 
-</ul>
 {% endblock %}
 
 
