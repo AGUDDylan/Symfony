@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{%  block title 'Vue d\'un accueil' %}
+
+
+{%  block header  %}
+    <h1>Details </h1>
+{% endblock %}
+
+{% block content %}
+
+<p> {{  tweet.message }}</p>
+
+    <p> {{  tweet.createdAt|date('Y-m-d') }}</p>
+
+{% endblock %}
+
+
+{%  block footer %}
+    {{ parent() }}
+
+    <a href="{{  path('app_twig_test') }}"> Lien vers la page twig test</a>
+    <br>
+    <a href="{{  path('app_tweet_list') }}"> Lien vers la page tweett</a>
+
+{% endblock %}
